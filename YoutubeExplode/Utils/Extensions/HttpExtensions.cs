@@ -46,6 +46,12 @@ internal static class HttpExtensions
         foreach (var (key, value) in request.Headers)
             clonedRequest.Headers.TryAddWithoutValidation(key, value);
 
+        if (request.Content is not null && clonedRequest.Content is not null)
+        {
+            foreach (var (key, value) in request.Content.Headers)
+                clonedRequest.Content.Headers.TryAddWithoutValidation(key, value);
+        }
+
         return clonedRequest;
     }
 
