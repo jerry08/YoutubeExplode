@@ -1,5 +1,17 @@
 # Changelog
 
+## v6.3.6 (17-Oct-2023)
+
+- Fixed an issue where calling `VideoClient.GetAsync(...)` on certain videos failed with an exception due to recent YouTube changes.
+
+## v6.3.5 (28-Sep-2023)
+
+- Added support for parsing live video URLs (i.e. `youtube.com/live/...`). (Thanks [@eimigueloliveir](https://github.com/eimigueloliveir))
+
+## v6.3.4 (06-Sep-2023)
+
+- Fixed an issue where calling any method on `SearchClient` resulted in an exception on mobile devices. (Thanks [@jerry08](https://github.com/jerry08))
+
 ## v6.3.3 (31-Aug-2023)
 
 - Fixed an issue where calling `ChannelClient.GetAsync(...)` and `PlaylistClient.GetAsync(...)` failed on some channels and playlists due to recent YouTube changes. (Thanks [@tmm360](https://github.com/tmm360))
